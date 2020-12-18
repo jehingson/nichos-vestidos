@@ -21,7 +21,7 @@
         <nav class="nav">
           <div class="nav-menu flex-row">
           <div class="nav-brand">
-            <a href="#" class="text-gray">Vestidos Live</a>
+            <a href="index.html" class="text-gray">Vestidos Live</a>
           </div>
           <div class="toggle-collapse">
             <div class="toggle-icons">
@@ -66,33 +66,6 @@
           Plataforma de PAGO SEGURO de Amazon.
           Derecho a Devolución de 15 días SIN PREGUNTAS.</p></li>
       </ul>
-    </section>
-
-    <section >
-      <div class="inicio">
-      <div class="div">
-        <h2>Vestidos Cortos</h2>
-      </div>
-    </div>
-      <div class="amazoon" id="cortos"></div>
-    </section>
-
-    <section >
-      <div class="inicio">
-      <div class="div">
-        <h2>Vestidos Largos</h2>
-      </div>
-    </div>
-      <div class="amazoon" id="largos"></div>
-    </section>
-
-    <section >
-      <div class="inicio">
-      <div class="div">
-        <h2>Vestidos de fiesta</h2>
-      </div>
-    </div>
-      <div class="amazoon" id="fiesta"></div>
     </section>
 
     <section>
@@ -371,55 +344,6 @@
 <!-- Custom Javascript file --> 
 <script src="./js/main.js" ></script>
 
-<script type="module">
-   import Data from './js/Data.js';
-
-    function functionRender(renderProducto, category) {
-      renderProducto.innerHTML = '';
-      for (let i = 0; i< 10 ; i++){
-        let title = category[i].title;
-        let price = category[i].price;
-        let images = category[i].images;
-
-        renderProducto.innerHTML += `
-          <div class="amazoon-grid">
-        <div class="images">
-         <div>
-          ${images}
-         </div>
-       </div>
-         <div class="amazoon-text">
-           <h3>${title}</h3>
-         </div>
-       <p>${price} <span>EUR</span></p>
-     </div>
-       `;
-        }
-     
-      }
-        
-      window.onload = function(){
-        const cortos = document.getElementById("cortos");
-        const largos= document.getElementById("largos");
-        const fiesta = document.getElementById("fiesta");
-        if(cortos){
-          let category = Data.vestidosverdescortos
-          functionRender(cortos, category)
-        }
-        if(largos){
-          let category = Data.vestidosverdeslargos
-          functionRender(largos, category)
-        }
-        if(fiesta){
-          let category = Data.vestidosfiesta
-          functionRender(fiesta, category)
-        }
-      
-      
-    }
-
-    
-</script>
 
 </body>
 </html>

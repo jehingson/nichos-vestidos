@@ -220,6 +220,5 @@ export default {
     },
     
    
-  ],
-  
+  ], 
 };
