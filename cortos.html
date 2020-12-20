@@ -146,7 +146,7 @@
    import Data from './js/Data.js';
     
     let page = 1;
-    let number = 6;
+    let number = 15;
 
     let cortos = document.getElementById("cortos");
     const cargarMas = document.getElementById("cargar")
@@ -154,7 +154,7 @@
     cargarMas.addEventListener("click", () =>{
       page = page + 1 ;
       let value = number*page;
-      let category = Data.vestidosverdescortos
+      let category = Data.vestidoscortos
       console.log('vamos bien', value)
       if(category.length > value){
           functionRender(cortos, category, value)
@@ -196,8 +196,8 @@
         
         if(cortos){
           
-          const value = 6;
-          let category = Data.vestidosverdescortos
+          const value = 15;
+          let category = Data.vestidoscortos
           functionRender(cortos, category, value)
         }
     }
