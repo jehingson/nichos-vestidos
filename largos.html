@@ -67,7 +67,7 @@
     </section>
 
     <section >      
-    <div class="amazoon" id="cortos"></div>
+    <div class="amazoon" id="largos"></div>
       <div class="cargar" id="cargar"><p>Cargar más</p></div>
     </div>
 
@@ -159,28 +159,23 @@
    import Data from './js/Data.js';
     
     let page = 1;
-    let number = 6;
+    let number = 15;
 
-    let cortos = document.getElementById("cortos");
+    let largos = document.getElementById("largos");
     const cargarMas = document.getElementById("cargar")
 
     cargarMas.addEventListener("click", () =>{
       page = page + 1 ;
       let value = number*page;
-      let category = Data.vestidosverdescortos
-      console.log('vamos bien', value)
+      let category = Data.vestidoslargos
       if(category.length > value){
-          functionRender(cortos, category, value)
+          functionRender(largos, category, value)
       }else{
-          functionRender(cortos, category, category.length)
+          functionRender(largos, category, category.length)
       }
     })
 
-
-
-    function functionRender(renderProducto, category, value) {
-
-      
+    function functionRender(renderProducto, category, value) {      
       renderProducto.innerHTML = '';
       for (let i = 0; i< value ; i++){
         let title = category[i].title;
@@ -207,11 +202,10 @@
         
       window.onload = function(){
         
-        if(cortos){
-          
-          const value = 6;
-          let category = Data.vestidosverdescortos
-          functionRender(cortos, category, value)
+        if(largos){
+          const value = 15;
+          let category = Data.vestidoslargos
+          functionRender(largos, category, value)
         }
     }
 
