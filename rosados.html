@@ -69,7 +69,7 @@
     </section>
 
     <section >
-    <div class="amazoon" id="cortos"></div>
+    <div class="amazoon" id="rosados"></div>
       <div class="cargar" id="cargar"><p>Cargar más</p></div>
     </div>
 
@@ -129,20 +129,20 @@
    import Data from './js/Data.js';
     
     let page = 1;
-    let number = 6;
+    let number = 8;
 
-    let cortos = document.getElementById("cortos");
+    let rosados = document.getElementById("rosados");
     const cargarMas = document.getElementById("cargar")
 
     cargarMas.addEventListener("click", () =>{
       page = page + 1 ;
       let value = number*page;
-      let category = Data.vestidosverdescortos
+      let category = Data.vestidosrosados
       console.log('vamos bien', value)
       if(category.length > value){
-          functionRender(cortos, category, value)
+          functionRender(rosados, category, value)
       }else{
-          functionRender(cortos, category, category.length)
+          functionRender(rosados, category, category.length)
       }
     })
 
@@ -174,11 +174,11 @@
       }        
       window.onload = function(){
         
-        if(cortos){
+        if(rosados){
           
-          const value = 6;
-          let category = Data.vestidosverdescortos
-          functionRender(cortos, category, value)
+          const value = 9;
+          let category = Data.vestidosrosados
+          functionRender(rosados, category, value)
         }
     }
 
