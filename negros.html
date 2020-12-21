@@ -69,7 +69,7 @@
     </section>
 
     <section >
-    <div class="amazoon" id="cortos"></div>
+    <div class="amazoon" id="negros"></div>
       <div class="cargar" id="cargar"><p>Cargar más</p></div>
     </div>
 
@@ -87,7 +87,6 @@
       <br>
       <p>Ya sea que esté buscando un vestido negro de noche largo, un vestido negro casual corto, un vestido festivo de fiesta de cóctel negro, o un elegante vestido de noche negro, encontrar su vestido negro ideal en vestidos live. Los vestidos negros pueden ser simples o sofisticados y elegantes o clásicos, dependiendo del estilo, el diseño y las características. Esta colección incluye una variedad de estilos, desde vestidos negros baratos hasta impresionantes vestidos de noche negros para asegurar un look para cada mujer, presupuesto y evento. </p>
     </section>
-
 
     <footer>
       <ul class="icons">
@@ -135,20 +134,20 @@
    import Data from './js/Data.js';
     
     let page = 1;
-    let number = 6;
+    let number = 8;
 
-    let cortos = document.getElementById("cortos");
+    let negros = document.getElementById("negros");
     const cargarMas = document.getElementById("cargar")
 
     cargarMas.addEventListener("click", () =>{
       page = page + 1 ;
       let value = number*page;
-      let category = Data.vestidosverdescortos
+      let category = Data.vestidosnegros
       console.log('vamos bien', value)
       if(category.length > value){
-          functionRender(cortos, category, value)
+          functionRender(negros, category, value)
       }else{
-          functionRender(cortos, category, category.length)
+          functionRender(negros, category, category.length)
       }
     })
 
@@ -183,11 +182,11 @@
         
       window.onload = function(){
         
-        if(cortos){
+        if(negros){
           
-          const value = 6;
-          let category = Data.vestidosverdescortos
-          functionRender(cortos, category, value)
+          const value = 9;
+          let category = Data.vestidosnegros
+          functionRender(negros, category, value)
         }
     }
 
